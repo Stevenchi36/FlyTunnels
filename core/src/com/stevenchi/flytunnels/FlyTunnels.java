@@ -7,6 +7,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class FlyTunnels extends ApplicationAdapter {
+	public static final int WIDTH = 800;
+	public static final int HEIGHT = 480;
+	public static final String TITLE = "Fly Tunnels";
+
 	SpriteBatch batch;
 	Texture img;
 	
