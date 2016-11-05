@@ -12,7 +12,7 @@ public class PlayState extends States {
 
     public PlayState(GameStateManager gsm) {
         super(gsm);
-        ship = new Texture("");
+        ship = new Texture("ship.png");
     }
 
     @Override
@@ -27,7 +27,9 @@ public class PlayState extends States {
 
     @Override
     public void render(SpriteBatch sb) {
-
+        sb.begin();
+        sb.draw(ship, 50, 50);
+        sb.end();
     }
 
     @Override

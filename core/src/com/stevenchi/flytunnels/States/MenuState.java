@@ -1,5 +1,6 @@
 package com.stevenchi.flytunnels.states;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.stevenchi.flytunnels.FlyTunnels;
@@ -21,12 +22,15 @@ public class MenuState extends States {
 
     @Override
     public void handleInput() {
-
+        if(Gdx.input.justTouched()){
+            gsm.set(new PlayState(gsm));
+            dispose();
+        }
     }
 
     @Override
     public void update(float dt) {
-
+        handleInput();;
     }
 
     @Override
