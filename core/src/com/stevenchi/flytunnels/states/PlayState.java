@@ -1,5 +1,6 @@
 package com.stevenchi.flytunnels.states;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.stevenchi.flytunnels.sprites.Ship;
@@ -11,15 +12,19 @@ import com.stevenchi.flytunnels.sprites.Ship;
 public class PlayState extends States {
 
     private Ship ship;
+    private Texture background;
 
     public PlayState(GameStateManager gsm) {
         super(gsm);
         ship = new Ship(50, 250);
+        background = new Texture("background.png");
     }
 
     @Override
     protected void handleInput() {
-
+        if(Gdx.input.justTouched()){
+            ship.fly();
+        }
     }
 
     @Override
@@ -33,6 +38,7 @@ public class PlayState extends States {
     @Override
     public void render(SpriteBatch sb) {
         sb.begin();
+        sb.draw(background, cam.position.x - cam.viewportWidth / 2, 0);
         sb.draw(ship.getTexture(), ship.getPosition().x, ship.getPosition().y);
         sb.end();
     }
