@@ -1,4 +1,4 @@
-package com.stevenchi.flytunnels.States;
+package com.stevenchi.flytunnels.states;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -35,5 +35,11 @@ public class MenuState extends States {
         sb.draw(background, 0, 0, FlyTunnels.WIDTH, FlyTunnels.HEIGHT);
         sb.draw(playButton, (FlyTunnels.WIDTH / 2) - (playButton.getWidth() / 2), (FlyTunnels.HEIGHT / 2) - playButton.getHeight() / 2);
         sb.end();
+    }
+
+    @Override
+    public void dispose() {
+        background.dispose();
+        playButton.dispose();
     }
 }

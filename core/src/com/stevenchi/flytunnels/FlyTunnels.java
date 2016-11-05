@@ -5,8 +5,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.stevenchi.flytunnels.States.GameStateManager;
-import com.stevenchi.flytunnels.States.MenuState;
+import com.stevenchi.flytunnels.states.GameStateManager;
+import com.stevenchi.flytunnels.states.MenuState;
 
 public class FlyTunnels extends ApplicationAdapter {
 	public static final int WIDTH = 800;

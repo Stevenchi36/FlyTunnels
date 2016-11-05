@@ -1,4 +1,4 @@
-package com.stevenchi.flytunnels.States;
+package com.stevenchi.flytunnels.states;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 

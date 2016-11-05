@@ -1,4 +1,4 @@
-package com.stevenchi.flytunnels.States;
+package com.stevenchi.flytunnels.states;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -23,4 +23,5 @@ public abstract class States {
     protected abstract void handleInput();
     public abstract void update(float dt);
     public abstract void render(SpriteBatch sb);
+    public abstract void dispose();
 }
