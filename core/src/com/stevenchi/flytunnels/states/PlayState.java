@@ -2,17 +2,19 @@ package com.stevenchi.flytunnels.states;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.stevenchi.flytunnels.sprites.Ship;
 
 /**
  * Created by Steven on 11/5/2016.
  */
 
 public class PlayState extends States {
-    private Texture ship;
+
+    private Ship ship;
 
     public PlayState(GameStateManager gsm) {
         super(gsm);
-        ship = new Texture("ship.png");
+        ship = new Ship(50, 250);
     }
 
     @Override
@@ -23,12 +25,15 @@ public class PlayState extends States {
     @Override
     public void update(float dt) {
 
+        handleInput();
+        ship.update(dt);
+
     }
 
     @Override
     public void render(SpriteBatch sb) {
         sb.begin();
-        sb.draw(ship, 50, 50);
+        sb.draw(ship.getTexture(), ship.getPosition().x, ship.getPosition().y);
         sb.end();
     }
 
